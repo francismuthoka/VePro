@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/back_image"
+    android:layout_height="match_parent"
+    tools:context=".CustomerViewMyDetails">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:id="@+id/cardView"
+        android:layout_height="54dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:id="@+id/contentbar"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:layout_centerVertical="true"
+                android:layout_width="26dp"
+                android:id="@+id/drawer_btn"
+                android:background="@drawable/drawer"
+                android:layout_marginStart="18dp"
+                android:layout_height="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="Welcome to VegPro"
+                android:textSize="26sp"
+                android:id="@+id/headertxt"
+                android:fontFamily="sans-serif-black"
+                android:layout_centerHorizontal="true"/>
+
+            <ImageView
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_alignParentEnd="true"
+                android:src="@mipmap/logo"
+                android:layout_marginRight="18dp"
+                android:layout_centerVertical="true"
+                />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_marginTop="140dp"
+        android:layout_below="@+id/cardView"
+        android:orientation="vertical"
+        tools:ignore="UnknownId">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginVertical="2dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-black"
+                android:text="Name: "/>
+
+            <TextView
+                android:id="@+id/customer_name_rv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:text="francis"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="2dp"
+
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="sans-serif-black"
+                android:text="Phone no: "
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/phone_phone_cv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:fontFamily="sans-serif"
+                android:text="1729288"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="2dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-black"
+                android:text="Password: "/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nairobi"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif"
+                android:id="@+id/customer_pas_rv"
+                android:layout_marginStart="10dp"
+                android:textSize="20sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="2dp"
+
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-black"
+                android:text="Email: "/>
+
+            <TextView
+                android:id="@+id/customer_email_rv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="sans-serif"
+                android:text="egpro"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="2dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-black"
+                android:text="Date of Birth: "/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="14/9/2022"
+                android:id="@+id/customer_date_rv"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif"
+                android:layout_marginStart="10dp"
+                android:textSize="20sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="2dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-black"
+                android:text="Customer code: "/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="770256805"
+                android:id="@+id/customer_my_co_rv"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif"
+                android:layout_marginStart="10dp"
+                android:textSize="20sp"
+                tools:ignore="DuplicateIds" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="2dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-black"
+                android:text="Gender: "/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="770256805"
+                android:id="@+id/customer_gen_rv"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif"
+                android:layout_marginStart="10dp"
+                android:textSize="20sp"
+                tools:ignore="DuplicateIds" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="2dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-black"
+                android:text="Resident: "/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="770256805"
+                android:id="@+id/customer_res_rv"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif"
+                android:layout_marginStart="10dp"
+                android:textSize="20sp"/>
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

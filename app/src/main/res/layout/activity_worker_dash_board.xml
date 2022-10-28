@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_image"
+    tools:context=".WorkerDashBoard">
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:id="@+id/cardView"
+        android:layout_height="54dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:id="@+id/contentbar"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:layout_centerVertical="true"
+                android:layout_width="26dp"
+                android:id="@+id/drawer_btn"
+                android:background="@drawable/drawer"
+                android:layout_marginStart="16dp"
+                android:layout_height="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="Welcome to VegPro"
+                android:textSize="16sp"
+                android:id="@+id/headertxt"
+                android:fontFamily="sans-serif-black"
+                android:layout_centerHorizontal="true"/>
+
+            <ImageView
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_alignParentEnd="true"
+                android:src="@mipmap/logo"
+                android:layout_marginRight="18dp"
+                android:layout_centerVertical="true"
+                />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnCount="2"
+        android:background="@color/white"
+        android:layout_marginTop="180dp"
+        android:rowCount="1">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"
+            android:layout_row="0"
+            app:cardUseCompatPadding="true"
+            android:layout_column="0"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:id="@+id/worker_detils_cv"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#009444"
+                    android:src="@drawable/baseline_person_24"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="My Details"
+                    android:textAlignment="center"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"
+            android:layout_row="0"
+            app:cardUseCompatPadding="true"
+            android:layout_column="1"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:id="@+id/add_activity"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_add_task_24"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Activity Done"
+                    android:textAlignment="center"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </GridLayout>
+
+</RelativeLayout>

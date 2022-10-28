@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WorkerMyDetails">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:id="@+id/cardView"
+        android:layout_height="48dp">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:id="@+id/contentbar"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:layout_centerVertical="true"
+                    android:layout_width="26dp"
+                    android:id="@+id/drawer_btn"
+                    android:background="@drawable/drawer"
+                    android:layout_marginStart="16dp"
+                    android:layout_height="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="My Details"
+                    android:textSize="18sp"
+                    android:id="@+id/headertxt"
+                    android:fontFamily="sans-serif-black"
+                    android:layout_centerHorizontal="true"/>
+
+                <ImageView
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_alignParentEnd="true"
+                    android:src="@mipmap/logo"
+                    android:layout_marginRight="18dp"
+                    android:layout_centerVertical="true"
+                    />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/cardView"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="12dp"
+        android:id="@+id/row1"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="name:"
+            android:id="@+id/mydetailsname"
+            android:fontFamily="sans-serif-black"
+            android:layout_centerVertical="true"
+            android:textSize="18sp"
+            android:textAllCaps="true"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="francis mutua"
+            android:fontFamily="sans-serif"
+            android:textSize="18sp"
+            android:id="@+id/mydetailsnametxt"
+            android:layout_toRightOf="@+id/mydetailsname"
+            android:layout_marginStart="8dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/row1"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="12dp"
+        android:id="@+id/row2"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="email:"
+            android:id="@+id/mydetailsemail"
+            android:fontFamily="sans-serif-black"
+            android:layout_centerVertical="true"
+            android:textSize="18sp"
+            android:textAllCaps="true"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="1234@gmai."
+            android:fontFamily="sans-serif"
+            android:textSize="18sp"
+            android:id="@+id/mydetailsemailtxt"
+            android:layout_toRightOf="@+id/mydetailsemail"
+            android:layout_marginStart="8dp"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/row2"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="12dp"
+        android:id="@+id/row3"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="password:"
+            android:id="@+id/mydetailspassword"
+            android:fontFamily="sans-serif-black"
+            android:layout_centerVertical="true"
+            android:textSize="18sp"
+            android:textAllCaps="true"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="1234@gmai."
+            android:fontFamily="sans-serif"
+            android:textSize="18sp"
+            android:id="@+id/mydetailspassswordtxt"
+            android:layout_toRightOf="@+id/mydetailspassword"
+            android:layout_marginStart="8dp"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/row3"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="12dp"
+        android:id="@+id/row4"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="date of birth:"
+            android:id="@+id/mydetailsdateofbirth"
+            android:fontFamily="sans-serif-black"
+            android:layout_centerVertical="true"
+            android:textSize="18sp"
+            android:textAllCaps="true"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="1234@gmai."
+            android:fontFamily="sans-serif"
+            android:textSize="18sp"
+            android:id="@+id/mydetailsdateofbirthtxt"
+            android:layout_toRightOf="@+id/mydetailsdateofbirth"
+            android:layout_marginStart="8dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/row4"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="12dp"
+        android:id="@+id/row5"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="Id No:"
+            android:id="@+id/mydetailsid"
+            android:fontFamily="sans-serif-black"
+            android:layout_centerVertical="true"
+            android:textSize="18sp"
+            android:textAllCaps="true"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="1234@gmai."
+            android:fontFamily="sans-serif"
+            android:textSize="18sp"
+            android:id="@+id/mydetailsidtxt"
+            android:layout_toRightOf="@+id/mydetailsid"
+            android:layout_marginStart="8dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/row5"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="12dp"
+        android:id="@+id/row6"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="gender:"
+            android:id="@+id/mydetailsgender"
+            android:fontFamily="sans-serif-black"
+            android:layout_centerVertical="true"
+            android:textSize="18sp"
+            android:textAllCaps="true"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="1234@gmai."
+            android:fontFamily="sans-serif"
+            android:textSize="18sp"
+            android:id="@+id/mydetailsgendertxt"
+            android:layout_toRightOf="@+id/mydetailsgender"
+            android:layout_marginStart="8dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
