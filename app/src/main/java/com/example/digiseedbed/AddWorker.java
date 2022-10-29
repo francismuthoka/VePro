@@ -163,12 +163,12 @@ public class AddWorker extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()){
-                        databaseReference.child(firebaseAuth.getCurrentUser().getUid().toString()).setValue(addWorkerClass).addOnSuccessListener(new OnSuccessListener<Void>() {
+                        databaseReference.child(firebaseAuth.getCurrentUser().getUid()).setValue(addWorkerClass).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void unused) {
                                 databaseReference=firebaseDatabase.getReference("ROLES");
-                                Roles roles=new Roles(firebaseAuth.getCurrentUser().getUid().toString(),"Worker");
-                                databaseReference.child(firebaseAuth.getCurrentUser().getUid().toString()).setValue(roles).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                Roles roles=new Roles(firebaseAuth.getCurrentUser().getUid(),"Worker");
+                                databaseReference.child(firebaseAuth.getCurrentUser().getUid()).setValue(roles).addOnSuccessListener(new OnSuccessListener<Void>() {
                                     @Override
                                     public void onSuccess(Void unused) {
                                         progressDialog.dismiss();

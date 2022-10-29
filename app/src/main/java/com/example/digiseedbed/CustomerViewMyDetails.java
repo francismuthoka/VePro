@@ -40,7 +40,7 @@ public class CustomerViewMyDetails extends AppCompatActivity {
 
         firebaseDatabase= FirebaseDatabase.getInstance();
         firebaseAuth= FirebaseAuth.getInstance();
-        databaseReference=firebaseDatabase.getReference("CUSTOMERS").child(firebaseAuth.getCurrentUser().getUid().toString().trim());
+        databaseReference=firebaseDatabase.getReference("CUSTOMERS").child(firebaseAuth.getCurrentUser().getUid().trim());
 
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override

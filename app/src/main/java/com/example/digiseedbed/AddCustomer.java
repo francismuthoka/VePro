@@ -272,13 +272,13 @@ public class AddCustomer extends AppCompatActivity {
                 @Override
                      public void onComplete(@NonNull Task<AuthResult> task) {
                          if (task.isSuccessful()){
-                                databaseReference.child(firebaseAuth.getCurrentUser().getUid().toString()).setValue(addCustomerClass).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                databaseReference.child(firebaseAuth.getCurrentUser().getUid()).setValue(addCustomerClass).addOnSuccessListener(new OnSuccessListener<Void>() {
                                     @Override
                                     public void onSuccess(Void unused) {
                                                 databaseReference.child(customer_codetxt);
                                                 databaseReference = firebaseDatabase.getReference("ROLES");
-                                                Roles roles = new Roles(firebaseAuth.getCurrentUser().getUid().toString(), "Customer");
-                                                databaseReference.child(firebaseAuth.getCurrentUser().getUid().toString()).setValue(roles).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                                Roles roles = new Roles(firebaseAuth.getCurrentUser().getUid(), "Customer");
+                                                databaseReference.child(firebaseAuth.getCurrentUser().getUid()).setValue(roles).addOnSuccessListener(new OnSuccessListener<Void>() {
                                                     @Override
                                                     public void onSuccess(Void unused) {
                                                         databaseReference = firebaseDatabase.getReference("NURSERY BEDS DESCRIPTION");

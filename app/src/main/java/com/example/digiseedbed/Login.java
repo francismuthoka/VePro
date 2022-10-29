@@ -77,7 +77,7 @@ public class Login extends AppCompatActivity {
 
                         }
                         else {
-                            databaseReference=firebaseDatabase.getReference("ROLES").child(firebaseAuth.getCurrentUser().getUid().toString());
+                            databaseReference=firebaseDatabase.getReference("ROLES").child(firebaseAuth.getCurrentUser().getUid());
                             databaseReference.addValueEventListener(new ValueEventListener() {
                                 @Override
                                 public void onDataChange(@NonNull DataSnapshot snapshot) {

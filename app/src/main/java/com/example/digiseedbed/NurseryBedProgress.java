@@ -97,7 +97,7 @@ public class NurseryBedProgress extends AppCompatActivity {
 
         else if (activity.equals("Customer Activity")){
 
-            databaseReference=firebaseDatabase.getReference("CUSTOMERS").child(firebaseAuth.getCurrentUser().getUid().toString());
+            databaseReference=firebaseDatabase.getReference("CUSTOMERS").child(firebaseAuth.getCurrentUser().getUid());
             databaseReference.addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {

@@ -38,7 +38,7 @@ public class WorkerMyDetails extends AppCompatActivity {
         databaseReference=firebaseDatabase.getReference("WORKERS");
         firebaseAuth=FirebaseAuth.getInstance();
 
-        databaseReference.child(firebaseAuth.getCurrentUser().getUid().toString()).addValueEventListener(new ValueEventListener() {
+        databaseReference.child(firebaseAuth.getCurrentUser().getUid()).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 AddWorkerClass addWorkerClass=snapshot.getValue(AddWorkerClass.class);

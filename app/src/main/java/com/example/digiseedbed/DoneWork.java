@@ -51,7 +51,7 @@ public class DoneWork extends AppCompatActivity {
         databaseReference=firebaseDatabase.getReference("WORKERS");
         firebaseAuth=FirebaseAuth.getInstance();
 
-        databaseReference.child(firebaseAuth.getCurrentUser().getUid().toString()).addValueEventListener(new ValueEventListener() {
+        databaseReference.child(firebaseAuth.getCurrentUser().getUid()).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 AddWorkerClass addWorkerClass=snapshot.getValue(AddWorkerClass.class);
@@ -100,7 +100,7 @@ public class DoneWork extends AppCompatActivity {
     private void addActivity() {
         String activity_donetxt=activity_done.getText().toString().trim();
         String Reason_donetxt=Reason_done.getText().toString().trim();
-        String code_donetxt=code_done.getText().toString().trim();;
+        String code_donetxt=code_done.getText().toString().trim();
 
         Calendar calendar;
         calendar=Calendar.getInstance();
