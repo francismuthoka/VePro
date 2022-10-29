@@ -102,6 +102,7 @@
             android:text="forgot password"
             android:fontFamily="sans-serif"
             android:textSize="16sp"
+            android:id="@+id/forgot_pass"
             android:layout_marginEnd="4dp"
             android:textColor="@color/black"
             android:layout_centerVertical="true"

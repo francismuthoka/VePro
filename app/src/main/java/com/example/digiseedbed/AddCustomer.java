@@ -10,9 +10,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
@@ -79,6 +82,14 @@ public class AddCustomer extends AppCompatActivity {
         add_customer_btn=findViewById(R.id.add_customer_btn);
         spinner_plant=findViewById(spinner_plant_name);
         genderSpinner=findViewById(R.id.genderSpinner);
+
+        if (Build.VERSION.SDK_INT >= 21) {
+            Window window = this.getWindow();
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+            window.setNavigationBarColor(this.getResources().getColor(R.color.colorPrimaryDark));
+            window.setStatusBarColor(this.getResources().getColor(R.color.colorPrimaryDark));
+        }
 
         List<String> plantlist=new ArrayList<>();
         plantlist.add("Coffee plant");

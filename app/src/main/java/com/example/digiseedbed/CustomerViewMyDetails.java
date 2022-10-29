@@ -4,7 +4,10 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.os.Build;
 import android.os.Bundle;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -37,6 +40,14 @@ public class CustomerViewMyDetails extends AppCompatActivity {
         customer_my_co_rv=findViewById(R.id.customer_my_co_rv);
         customer_gen_rv=findViewById(R.id.customer_gen_rv);
         customer_res_rv=findViewById(R.id.customer_res_rv);
+
+        if (Build.VERSION.SDK_INT >= 21) {
+            Window window = this.getWindow();
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+            window.setNavigationBarColor(this.getResources().getColor(R.color.colorPrimaryDark));
+            window.setStatusBarColor(this.getResources().getColor(R.color.colorPrimaryDark));
+        }
 
         firebaseDatabase= FirebaseDatabase.getInstance();
         firebaseAuth= FirebaseAuth.getInstance();
