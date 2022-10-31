@@ -6,13 +6,19 @@ import android.content.Intent;
 import android.media.Image;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 public class AdminDashBoard extends AppCompatActivity {
+
+    private Timer timer;
 
     LinearLayout progress,customers,workers,add_customer,add_worker;
 
@@ -67,5 +73,37 @@ public class AdminDashBoard extends AppCompatActivity {
         });
 
 
+    }
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        timer = new Timer();
+        Log.i("Main", "Invoking logout timer");
+        LogOutTimerTask logoutTimeTask = new LogOutTimerTask();
+        timer.schedule(logoutTimeTask, 300000); //auto logout in 5 minutes
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (timer != null) {
+            timer.cancel();
+            Log.i("Main", "cancel timer");
+            timer = null;
+        }
+    }
+
+    private class LogOutTimerTask extends TimerTask {
+
+        @Override
+        public void run() {
+
+            //redirect user to login screen
+            Intent i = new Intent(AdminDashBoard.this, Login.class);
+            i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(i);
+            finish();
+        }
     }
 }
